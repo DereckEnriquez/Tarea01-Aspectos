@@ -11,7 +11,8 @@ public aspect Performance {
 	Calendar cal = Calendar.getInstance();
 	
 	pointcut successT1() : call(void com.observer.Ventana.ChangeColorBlue(..));
-    after() : successT1() {   	
+    after() : successT1() {
+    	cal=Calendar.getInstance();
     	try {
             FileWriter escribir = new FileWriter(file, true);
             for (int i = 0; i < 2; i++) {
@@ -27,7 +28,8 @@ public aspect Performance {
     	}
     
     pointcut successT2() : call(void com.observer.Ventana.ChangeColorCyan(..));
-    after() : successT2() {   	
+    after() : successT2() {
+    	cal=Calendar.getInstance();
     	try {
             FileWriter escribir = new FileWriter(file, true);
             for (int i = 0; i < 2; i++) {
@@ -42,7 +44,8 @@ public aspect Performance {
         }  	
     }
     pointcut successT3() : call(void com.observer.Ventana.ChangeColorGreen(..));
-    after() : successT3() {   	
+    after() : successT3() {
+    	cal=Calendar.getInstance();
     	try {
             FileWriter escribir = new FileWriter(file, true);
             for (int i = 0; i < 2; i++) {
