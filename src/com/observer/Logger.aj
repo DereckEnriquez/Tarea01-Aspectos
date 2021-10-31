@@ -1,11 +1,9 @@
 package com.observer;
 import java.io.*;
-import java.util.*;
 import java.util.Calendar;
 
 
-
-public aspect Performance {
+public aspect Logger {
 	
 	File file = new File("Regristro de cambio de color.txt");
 	Calendar cal = Calendar.getInstance();
