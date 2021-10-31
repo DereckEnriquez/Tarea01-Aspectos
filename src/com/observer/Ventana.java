@@ -28,12 +28,14 @@ public class Ventana extends JFrame {
 		
 		layout.putConstraint(SpringLayout.WEST, boton3, 210, SpringLayout.WEST, FondoPanel);
 		layout.putConstraint(SpringLayout.NORTH, boton3, 20, SpringLayout.NORTH, FondoPanel);
-		
-		boton1.addActionListener(new ActionListener() 
+
+			
+	    boton1.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed (ActionEvent evento) 
 			{
-				FondoPanel.setBackground(Color.BLUE);
+				ChangeColorCyan(FondoPanel);
+				System.out.println("Cambio a color Cyan");  
 			}
 		});
 		
@@ -41,7 +43,8 @@ public class Ventana extends JFrame {
 		{
 			public void actionPerformed (ActionEvent evento) 
 			{
-				FondoPanel.setBackground(Color.CYAN);
+				ChangeColorBlue(FondoPanel);
+				System.out.println("Cambio a color Azul");  
 			}
 		});
 		
@@ -49,7 +52,9 @@ public class Ventana extends JFrame {
 		{
 			public void actionPerformed (ActionEvent evento) 
 			{
-				FondoPanel.setBackground(Color.GREEN);
+				ChangeColorGreen(FondoPanel);
+				System.out.println("Cambio a color Verde");  
+				
 			}
 		});
 		
@@ -57,5 +62,15 @@ public class Ventana extends JFrame {
 		FondoPanel.add(boton2);
 		FondoPanel.add(boton3);
 	
+	}
+	
+	public static void ChangeColorBlue(Container c){
+		c.setBackground(Color.BLUE);
+	}
+	public static void ChangeColorCyan(Container c){
+		c.setBackground(Color.CYAN);
+	}
+	public static void ChangeColorGreen(Container c){
+		c.setBackground(Color.GREEN);
 	}
 }
